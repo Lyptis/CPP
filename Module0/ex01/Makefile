@@ -6,18 +6,18 @@
 #    By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/01 00:23:19 by cbernot           #+#    #+#              #
-#    Updated: 2023/07/26 15:29:36 by svanmeen         ###   ########.fr        #
+#    Updated: 2023/07/29 21:36:24 by svanmeen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	phone
-SRCS	=	main.cpp Contact.cpp
+SRCS	=	main.cpp Contact.cpp PhoneBook.cpp
 
 CC			=	c++
-OBJS 		=	${SRCS:.c=.o}
+OBJS 		=	${SRCS:.cpp=.o}
 FLAGS		=	-Wall -Wextra -Werror -std=c++98
 
-%.o: %.c
+%.o: %.cpp
 	${CC} ${FLAGS} -c $< -o $@
 
 ${NAME}: ${OBJS} 

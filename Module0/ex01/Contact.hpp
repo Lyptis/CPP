@@ -6,7 +6,7 @@
 /*   By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/26 15:06:17 by svanmeen          #+#    #+#             */
-/*   Updated: 2023/07/26 15:29:55 by svanmeen         ###   ########.fr       */
+/*   Updated: 2023/09/04 16:05:54 by svanmeen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,19 +18,25 @@
 
 class Contact
 {
-public:
+private:
 
 	std::string	first_name;
 	std::string	last_name;
 	std::string	nickname;
-	int			phone_number;
+	std::string	phone_number;
 	std::string	secret;
-	std::tm		*timestamp;
+	std::time_t		timestamp;
 
+public:
 	Contact();
 	~Contact();
-
-	void	Add();
+	void	Fill();
+	std::string	get_first_name();
+	std::string	get_last_name();
+	std::string	get_nickname();
+	std::string	get_secret();
+	std::string	get_phone_number();
+	std::time_t		get_timestamp();
 };
 
 #endif
