@@ -5,35 +5,28 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/08 15:52:53 by svanmeen          #+#    #+#             */
-/*   Updated: 2023/09/12 16:03:28 by svanmeen         ###   ########.fr       */
+/*   Created: 2023/09/19 14:41:44 by svanmeen          #+#    #+#             */
+/*   Updated: 2023/09/20 13:26:15 by svanmeen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/HumanA.hpp"
-#include "include/HumanB.hpp"
-#include "include/Weapon.hpp"
-#include <string>
+#include "include/Fixed.hpp"
 #include <iostream>
 
-int main()
-{
-	{
-		Weapon club = Weapon("crude spiked club");
-
-		HumanA bob("Bob", club);
-		bob.attack();
-		club.setType("some other type of club");
-		bob.attack();
-	}
-	{
-		Weapon club = Weapon("crude spiked club");
-
-		HumanB jim("Jim");
-		jim.setWeapon(club);
-		jim.attack();
-		club.setType("some other type of club");
-		jim.attack();
-	}
-	return 0;
+int main( void ) {
+Fixed a;
+Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
+std::cout << a << std::endl;
+std::cout << ++a << std::endl;
+std::cout << a << std::endl;
+std::cout << a++ << std::endl;
+std::cout << a << std::endl;
+std::cout << b << std::endl;
+std::cout << Fixed::max( a, b ) << std::endl;
+std::cout << Fixed::min( a, b ) << std::endl;
+std::cout << (a + b) << std::endl;
+std::cout << (a - b) << std::endl;
+std::cout << (a * b) << std::endl;
+std::cout << (a / b) << std::endl;
+return 0;
 }

@@ -6,15 +6,18 @@
 /*   By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 15:35:29 by svanmeen          #+#    #+#             */
-/*   Updated: 2023/09/08 15:48:36 by svanmeen         ###   ########.fr       */
+/*   Updated: 2023/09/12 15:54:01 by svanmeen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "include/Weapon.hpp"
+#include <string>
+#include <iostream>
 
-Weapon::Weapon()
+Weapon::Weapon(std::string type)
 {
-	std::cout << "Weapon created" << std::endl;
+	_type = type;
+	std::cout << "Weapon created with type : " << _type << std::endl;
 }
 
 Weapon::~Weapon()
@@ -24,13 +27,11 @@ Weapon::~Weapon()
 
 std::string &Weapon::getType()
 {
-	std::string	&type;
-
-	type = _type;
+	std::string	&type = _type;
 	return (type);
 }
 
-void	Weapon::Weapon(std::string type)
-{
+void	Weapon::setType(std::string type) {
 	_type = type;
+	std::cout << "Weapon type changed to : " << _type << std::endl;
 }

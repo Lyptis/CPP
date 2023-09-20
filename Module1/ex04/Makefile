@@ -6,24 +6,19 @@
 #    By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/01 00:23:19 by cbernot           #+#    #+#              #
-#    Updated: 2023/09/12 15:25:03 by svanmeen         ###   ########.fr        #
+#    Updated: 2023/09/12 17:35:17 by svanmeen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	a.out
 SRCS	=	main.cpp \
-			HumanA.cpp \
-			HumanB.cpp \
-			Weapon.cpp \
-
-I_DIR	=	include/
 
 CC			=	c++
 OBJS 		=	${SRCS:.cpp=.o}
 FLAGS		=	-Wall -Wextra -Werror -std=c++98 -g
 
 %.o: %.cpp
-	${CC} ${FLAGS} -I ${I_DIR} -c $< -o $@
+	${CC} ${FLAGS} -c $< -o $@
 
 ${NAME}: ${OBJS} 
 	${CC} ${OBJS} -o ${NAME}

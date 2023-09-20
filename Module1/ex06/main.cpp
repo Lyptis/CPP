@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanB.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/08 15:43:00 by svanmeen          #+#    #+#             */
-/*   Updated: 2023/09/12 16:05:07 by svanmeen         ###   ########.fr       */
+/*   Created: 2023/09/13 20:56:19 by svanmeen          #+#    #+#             */
+/*   Updated: 2023/09/13 21:12:45 by svanmeen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMANB_HPP
-# define HUMANB_HPP
-# include <string>
-# include "Weapon.hpp"
+#include "include/Harl.hpp"
+#include <iostream>
+#include <string>
 
-class HumanB
-{
-	private:
-		Weapon		*_weapon;
-		std::string	_name;
-	public:
-		HumanB(std::string name);
-		~HumanB();
-		void	attack();
-		void	setWeapon(Weapon &weapon);
-};
+int main(int argc, char **argv) {
 
-#endif
+	if (argc != 2)
+	{
+		std::cout << "Usage: ./harl <level>" << std::endl;
+		return (1);
+	}
+	std::string	input(argv[1]);
+	Harl		harl;
+
+	harl.complain(input);
+	return (0);
+}
