@@ -6,7 +6,7 @@
 /*   By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 19:29:33 by svanmeen          #+#    #+#             */
-/*   Updated: 2023/09/25 15:08:52 by svanmeen         ###   ########.fr       */
+/*   Updated: 2023/09/27 11:13:01 by svanmeen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ ScravTrap::ScravTrap(std::string name) : ClapTrap(name)
 	std::cout << "ScravTrap name constructor called" << std::endl;
 }
 
-ScravTrap::ScravTrap(const ScravTrap &ScravTrap) : ClapTrap(ScravTrap)
+ScravTrap::ScravTrap(const ScravTrap &ScravTrap)
 {
 	std::cout << "ScravTrap copy constructor called" << std::endl;
 	*this = ScravTrap;
@@ -67,5 +67,5 @@ void	ScravTrap::attack(std::string const &target)
 
 void	ScravTrap::guardGate()
 {
-	std::cout << "ScravTrap " << _name << " has entered in Gate keeper mode." << std::endl;
+	std::cout << _name << " has entered in Gate keeper mode." << std::endl;
 }

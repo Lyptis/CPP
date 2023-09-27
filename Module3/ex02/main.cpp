@@ -6,7 +6,7 @@
 /*   By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 19:03:24 by svanmeen          #+#    #+#             */
-/*   Updated: 2023/09/27 11:03:58 by svanmeen         ###   ########.fr       */
+/*   Updated: 2023/09/27 11:13:35 by svanmeen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,6 @@ int		main()
 	ScravTrap.guardGate();
 	Copy.attack("a wall");
 	Copy.beRepaired(5);
-	Copy.highFivesGuys();
+	Marc.highFivesGuys();
 	return (0);
 }
