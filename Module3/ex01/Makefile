@@ -6,13 +6,14 @@
 #    By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/01 00:23:19 by cbernot           #+#    #+#              #
-#    Updated: 2023/09/27 10:28:39 by svanmeen         ###   ########.fr        #
+#    Updated: 2023/09/25 15:06:45 by svanmeen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	a.out
 SRCS	=	main.cpp \
-			ClapTrap.cpp
+			ClapTrap.cpp \
+			ScravTrap.cpp \
 
 I_DIR	=	include/
 

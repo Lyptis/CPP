@@ -1,26 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ScravTrap.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/21 11:50:33 by svanmeen          #+#    #+#             */
-/*   Updated: 2023/09/27 10:28:38 by svanmeen         ###   ########.fr       */
+/*   Created: 2023/09/21 19:22:49 by svanmeen          #+#    #+#             */
+/*   Updated: 2023/09/25 15:04:15 by svanmeen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/ClapTrap.hpp"
+#ifndef SCRAVTRAP_HPP
+# define SCRAVTRAP_HPP
+# include "ClapTrap.hpp"
 
-int main(void){
-	ClapTrap	claptrap("Diamond Horse");
-	ClapTrap	realclaptrap;
+class	ScravTrap : public ClapTrap
+{
+	private:
+		;
+	public:
+		ScravTrap();
+		ScravTrap(std::string name);
+		ScravTrap(const ScravTrap &ScravTrap);
+		~ScravTrap();
+		ScravTrap	&operator=(const ScravTrap &ScravTrap);
 
-	realclaptrap = claptrap;
+		void	attack(std::string const &target);
+		void	guardGate();
+};
 
-	realclaptrap.attack("a wall");
-	realclaptrap.takeDamage(15);
-	realclaptrap.beRepaired(4);
-	realclaptrap.beRepaired(4);
-	realclaptrap.beRepaired(4);
-}
+#endif

@@ -5,22 +5,25 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/21 11:50:33 by svanmeen          #+#    #+#             */
-/*   Updated: 2023/09/27 10:28:38 by svanmeen         ###   ########.fr       */
+/*   Created: 2023/09/21 19:03:24 by svanmeen          #+#    #+#             */
+/*   Updated: 2023/09/25 15:06:29 by svanmeen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "include/ClapTrap.hpp"
+#include "include/ScravTrap.hpp"
 
-int main(void){
-	ClapTrap	claptrap("Diamond Horse");
-	ClapTrap	realclaptrap;
+int		main()
+{
+	ClapTrap	ClapTrap("ClapTrap");
+	ScravTrap	ScravTrap("ScravTrap");
 
-	realclaptrap = claptrap;
-
-	realclaptrap.attack("a wall");
-	realclaptrap.takeDamage(15);
-	realclaptrap.beRepaired(4);
-	realclaptrap.beRepaired(4);
-	realclaptrap.beRepaired(4);
+	ClapTrap.attack("target");
+	ClapTrap.takeDamage(5);
+	ClapTrap.beRepaired(5);
+	ScravTrap.attack("target");
+	ScravTrap.takeDamage(5);
+	ScravTrap.beRepaired(5);
+	ScravTrap.guardGate();
+	return (0);
 }
