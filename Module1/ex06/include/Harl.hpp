@@ -6,12 +6,14 @@
 /*   By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 17:38:33 by svanmeen          #+#    #+#             */
-/*   Updated: 2023/09/13 21:00:25 by svanmeen         ###   ########.fr       */
+/*   Updated: 2023/10/04 11:52:50 by svanmeen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string>
-#include <iostream>
+#ifndef HARL_HPP
+# define HARL_HPP
+# include <string>
+# include <iostream>
 
 class Harl
 {
@@ -27,3 +29,5 @@ class Harl
 };
 
 typedef void (Harl::*fptr)(void);
+
+#endif

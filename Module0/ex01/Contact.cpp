@@ -6,7 +6,7 @@
 /*   By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/26 15:16:09 by svanmeen          #+#    #+#             */
-/*   Updated: 2023/09/04 16:29:57 by svanmeen         ###   ########.fr       */
+/*   Updated: 2023/10/04 11:43:03 by svanmeen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,12 @@
 #include <ctime>
 #include "Contact.hpp"
 
-Contact::Contact()
-{
-	
+Contact::Contact(){
+	std::cout << "Contact created" << std::endl;
 }
 
-Contact::~Contact()
-{
-	
+Contact::~Contact(){
+	std::cout << "Contact destroyed" << std::endl;
 }
 
 void Contact::Fill(){

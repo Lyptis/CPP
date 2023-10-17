@@ -5,17 +5,23 @@
 #                                                     +:+ +:+         +:+      #
 #    By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/03/01 00:23:19 by cbernot           #+#    #+#              #
-#    Updated: 2023/09/05 13:27:08 by svanmeen         ###   ########.fr        #
+#    Created: 2023/03/01 00:23:19 by svanmeen          #+#    #+#              #
+#    Updated: 2023/10/03 15:36:38 by svanmeen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	phone
-SRCS	=	tests.cpp Account.cpp
+NAME	=	a.out
+SRCS	=	main.cpp		\
+			Dog.cpp			\
+			Cat.cpp			\
+			Animal.cpp		\
+			Brain.cpp		\
+
+I_DIR	=	include/
 
 CC			=	c++
 OBJS 		=	${SRCS:.cpp=.o}
-FLAGS		=	-Wall -Wextra -Werror -std=c++98
+FLAGS		=	-Wall -Wextra -Werror -std=c++98 -g -I ${I_DIR}
 
 %.o: %.cpp
 	${CC} ${FLAGS} -c $< -o $@

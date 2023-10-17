@@ -6,7 +6,7 @@
 /*   By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 13:10:11 by svanmeen          #+#    #+#             */
-/*   Updated: 2023/10/03 14:51:27 by svanmeen         ###   ########.fr       */
+/*   Updated: 2023/10/04 11:41:45 by svanmeen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,4 @@ Animal	&Animal::operator=(const Animal &Animal) {
 		_type = Animal._type;
 	}
 	return (*this);
-}
-
-void	Animal::makeSound() const{
-	std::cout << "This is an animal sound" << std::endl;
 }

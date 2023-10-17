@@ -6,18 +6,18 @@
 /*   By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/29 21:27:38 by svanmeen          #+#    #+#             */
-/*   Updated: 2023/09/04 16:28:28 by svanmeen         ###   ########.fr       */
+/*   Updated: 2023/10/04 11:45:43 by svanmeen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 
 PhoneBook::PhoneBook(){
-	
+	std::cout << "PhoneBook constructor called" << std::endl;
 }
 
 PhoneBook::~PhoneBook(){
-	
+	std::cout << "PhoneBook destructor called" << std::endl;
 }
 
 void	PhoneBook::Add(){
@@ -70,6 +70,5 @@ void	PhoneBook::Search(){
 		std::cout << "Nickname: " << this->contacts[i].get_nickname() << std::endl;
 		std::cout << "Phone Number: " << this->contacts[i].get_phone_number() << std::endl;
 		std::cout << "Secret: " << this->contacts[i].get_secret() << std::endl;
-		std::cout << "Timestamp: " << this->contacts[i].get_timestamp() << std::endl;
 	}
 }

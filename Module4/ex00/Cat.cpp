@@ -6,7 +6,7 @@
 /*   By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 14:30:28 by svanmeen          #+#    #+#             */
-/*   Updated: 2023/10/04 11:29:48 by svanmeen         ###   ########.fr       */
+/*   Updated: 2023/10/03 15:01:45 by svanmeen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 
 Cat::Cat(void) : Animal("Cat"){
 	std::cout << "Cat default constructor called" << std::endl;
-	for (int i = 0; i < 100; i++)
-		_brain.setIdeas(i, "CatIdeas");
 }
 
 Cat::~Cat(){
@@ -31,15 +29,10 @@ Cat	&Cat::operator=(const Cat &Cat) {
 	std::cout << "Cat assignment operator called" << std::endl;
 	if (this != &Cat) {
 		_type = Cat._type;
-		_brain = Cat._brain;
 	}
 	return (*this);
 }
 
 void	Cat::makeSound(void) const {
 	std::cout << "Meow Meow" << std::endl;
-}
-
-void	Cat::think(int i) const {
-	std::cout << _brain.getIdeas(i) << std::endl;
 }

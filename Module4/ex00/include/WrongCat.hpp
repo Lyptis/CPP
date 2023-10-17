@@ -1,34 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/03 14:26:29 by svanmeen          #+#    #+#             */
-/*   Updated: 2023/10/04 11:28:42 by svanmeen         ###   ########.fr       */
+/*   Created: 2023/10/03 14:56:41 by svanmeen          #+#    #+#             */
+/*   Updated: 2023/10/03 15:01:57 by svanmeen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-# define DOG_HPP
-# include "Animal.hpp"
-# include "Brain.hpp"
+#ifndef WRONGCAT_HPP
+# define WRONGCAT_HPP
+# include "WrongAnimal.hpp"
 # include <string>
-# include <iostream>
 
-class	Dog : public Animal
+class WrongCat : public WrongAnimal
 {
 	private:
-		Brain	_brain;
+		;
 	public:
-		Dog();
-		Dog(const Dog &Dog);
-		~Dog();
-		Dog	&operator=(const Dog &Dog);
+		WrongCat();
+		WrongCat(const WrongCat &WrongCat);
+		~WrongCat();
+		WrongCat	&operator=(const WrongCat &WrongCat);
 
 		void	makeSound(void) const;
-		void	think(int i) const;
 };
 
 #endif

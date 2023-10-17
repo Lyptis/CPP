@@ -5,13 +5,19 @@
 #                                                     +:+ +:+         +:+      #
 #    By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/03/01 00:23:19 by cbernot           #+#    #+#              #
-#    Updated: 2023/09/27 12:45:20 by svanmeen         ###   ########.fr        #
+#    Created: 2023/03/01 00:23:19 by svanmeen          #+#    #+#              #
+#    Updated: 2023/10/03 15:08:09 by svanmeen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	a.out
 SRCS	=	main.cpp		\
+			Dog.cpp			\
+			Cat.cpp			\
+			Animal.cpp		\
+			WrongAnimal.cpp	\
+			WrongCat.cpp	\
+			WrongDog.cpp	\
 
 I_DIR	=	include/
 
