@@ -6,7 +6,7 @@
 #    By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/01 00:23:19 by cbernot           #+#    #+#              #
-#    Updated: 2023/09/08 15:21:40 by svanmeen         ###   ########.fr        #
+#    Updated: 2023/10/22 11:54:19 by svanmeen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ I_DIR	=	inc/
 
 CC			=	c++
 OBJS 		=	${SRCS:.cpp=.o}
-FLAGS		=	-Wall -Wextra -Werror -std=c++98 -g
+FLAGS		=	-Wall -Wextra -Werror -std=c++98
 
 %.o: %.cpp
 	${CC} ${FLAGS} -I ${I_DIR} -c $< -o $@
