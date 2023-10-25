@@ -6,7 +6,7 @@
 /*   By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/26 14:53:52 by svanmeen          #+#    #+#             */
-/*   Updated: 2023/09/04 15:57:14 by svanmeen         ###   ########.fr       */
+/*   Updated: 2023/10/25 13:24:29 by svanmeen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ int main(void) {
 	
 	while (true) {
 		std::getline(std::cin, input);
-		
 		if (input == "EXIT") {
 			std::cout << "Exiting..." << std::endl;
 			break;
@@ -34,6 +33,9 @@ int main(void) {
 		}
 		else if (!input.empty()){
 			std::cout << "Invalid command" << std::endl;
+		}
+		else {
+			return (0);
 		}
 		std::cin.clear();
 	}
