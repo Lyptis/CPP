@@ -6,11 +6,11 @@
 #    By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/01 00:23:19 by cbernot           #+#    #+#              #
-#    Updated: 2023/10/22 12:00:52 by svanmeen         ###   ########.fr        #
+#    Updated: 2023/10/26 11:13:43 by svanmeen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	a.out
+NAME	=	humans
 SRCS	=	main.cpp \
 			HumanA.cpp \
 			HumanB.cpp \

@@ -6,11 +6,11 @@
 #    By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/01 00:23:19 by cbernot           #+#    #+#              #
-#    Updated: 2023/10/22 11:54:38 by svanmeen         ###   ########.fr        #
+#    Updated: 2023/10/26 11:13:00 by svanmeen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	phone
+NAME	=	zombie
 SRCS	=	main.cpp Zombie.cpp randomChump.cpp newZombie.cpp
 I_DIR	=	inc/
 

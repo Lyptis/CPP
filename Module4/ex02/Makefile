@@ -6,11 +6,11 @@
 #    By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/01 00:23:19 by svanmeen          #+#    #+#              #
-#    Updated: 2023/10/22 16:51:20 by svanmeen         ###   ########.fr        #
+#    Updated: 2023/10/26 11:18:07 by svanmeen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	a.out
+NAME	=	animalv2
 SRCS	=	main.cpp		\
 			Dog.cpp			\
 			Cat.cpp			\

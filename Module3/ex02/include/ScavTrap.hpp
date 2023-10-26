@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScravTrap.hpp                                      :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,20 +10,20 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCRAVTRAP_HPP
-# define SCRAVTRAP_HPP
+#ifndef ScavTrap_HPP
+# define ScavTrap_HPP
 # include "ClapTrap.hpp"
 
-class	ScravTrap : public ClapTrap
+class	ScavTrap : public ClapTrap
 {
 	private:
 		;
 	public:
-		ScravTrap();
-		ScravTrap(std::string name);
-		ScravTrap(const ScravTrap &ScravTrap);
-		~ScravTrap();
-		ScravTrap	&operator=(const ScravTrap &ScravTrap);
+		ScavTrap();
+		ScavTrap(std::string name);
+		ScavTrap(const ScavTrap &ScavTrap);
+		~ScavTrap();
+		ScavTrap	&operator=(const ScavTrap &ScavTrap);
 
 		void	attack(std::string const &target);
 		void	guardGate();

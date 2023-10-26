@@ -6,11 +6,11 @@
 #    By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/01 00:23:19 by cbernot           #+#    #+#              #
-#    Updated: 2023/10/22 12:00:57 by svanmeen         ###   ########.fr        #
+#    Updated: 2023/10/26 11:13:56 by svanmeen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	a.out
+NAME	=	replace
 SRCS	=	main.cpp \
 
 CC			=	c++

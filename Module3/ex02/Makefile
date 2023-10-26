@@ -6,14 +6,14 @@
 #    By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/01 00:23:19 by cbernot           #+#    #+#              #
-#    Updated: 2023/10/22 16:50:31 by svanmeen         ###   ########.fr        #
+#    Updated: 2023/10/26 11:17:11 by svanmeen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	a.out
+NAME	=	fragtrap
 SRCS	=	main.cpp		\
 			ClapTrap.cpp	\
-			ScravTrap.cpp	\
+			ScavTrap.cpp	\
 			FragTrap.cpp	\
 
 I_DIR	=	include/
