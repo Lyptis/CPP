@@ -6,11 +6,11 @@
 #    By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/01 00:23:19 by cbernot           #+#    #+#              #
-#    Updated: 2023/10/26 11:14:13 by svanmeen         ###   ########.fr        #
+#    Updated: 2023/11/08 11:40:39 by svanmeen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	harl2
+NAME	=	harlFilter
 SRCS	=	main.cpp \
 			Harl.cpp \
 

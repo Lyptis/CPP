@@ -6,7 +6,7 @@
 /*   By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 20:56:19 by svanmeen          #+#    #+#             */
-/*   Updated: 2023/09/13 21:03:32 by svanmeen         ###   ########.fr       */
+/*   Updated: 2023/11/08 12:04:03 by svanmeen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,15 @@
 #include <iostream>
 #include <string>
 
-int main( void ) {
+int main(void)
+{
 
-	std::string	input;
-	Harl		harl;
+	std::string input;
+	Harl harl;
 
-	std::cout << "Enter a complain: ";
-	std::cin >> input;
-	harl.complain(input);
-	while (input.compare("EXIT"))
+	while (!(std::cin.eof()) && input.compare("EXIT"))
 	{
-		std::cout << "Enter a level: ";
+		std::cout << "Enter a level: " << std::endl;
 		std::cin >> input;
 		harl.complain(input);
 	}
