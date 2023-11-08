@@ -6,7 +6,7 @@
 #    By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/01 00:23:19 by cbernot           #+#    #+#              #
-#    Updated: 2023/10/26 11:14:02 by svanmeen         ###   ########.fr        #
+#    Updated: 2023/11/08 14:38:23 by svanmeen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,6 +15,7 @@ SRCS	=	main.cpp \
 			Harl.cpp \
 
 I_DIR	=	include/
+INC		=	${I_DIR}Harl.hpp
 
 CC			=	c++
 OBJS 		=	${SRCS:.cpp=.o}

@@ -6,7 +6,7 @@
 #    By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/01 00:23:19 by svanmeen          #+#    #+#              #
-#    Updated: 2023/10/26 11:17:45 by svanmeen         ###   ########.fr        #
+#    Updated: 2023/11/08 14:31:52 by svanmeen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ FLAGS		=	-Wall -Wextra -Werror -std=c++98 -I ${I_DIR}
 %.o: %.cpp
 	${CC} ${FLAGS} -c $< -o $@
 
-${NAME}: ${OBJS} 
+${NAME}: ${OBJS}
 	${CC} ${OBJS} -o ${NAME}
 
 all: ${NAME}

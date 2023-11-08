@@ -6,7 +6,7 @@
 /*   By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 15:04:24 by svanmeen          #+#    #+#             */
-/*   Updated: 2023/10/03 15:08:47 by svanmeen         ###   ########.fr       */
+/*   Updated: 2023/11/08 14:19:20 by svanmeen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,20 @@
 #include <iostream>
 
 WrongDog::WrongDog() : WrongAnimal() {
-	std::cout << "WrongDog default constructor called" << std::endl;
+	std::cout << "	" << COLOR_GREEN << "WrongDog default constructor called" << COLOR_RESET << std::endl;
 }
 
 WrongDog::~WrongDog() {
-	std::cout << "WrongDog default destructor called" << std::endl;
+	std::cout << COLOR_RED << "WrongDog default destructor called" << COLOR_RESET << std::endl;
 }
 
 WrongDog::WrongDog(const WrongDog &WrongDog) : WrongAnimal(WrongDog){
-	std::cout << "WrongDog copy constructor called" << std::endl;
+	std::cout << "	" << COLOR_GREEN << "WrongDog copy constructor called" << COLOR_RESET << std::endl;
 	*this = WrongDog;
 }
 
 WrongDog	&WrongDog::operator=(const WrongDog &WrongDog) {
-	std::cout << "WrongDog assignment operator called" << std::endl;
+	std::cout << COLOR_YELLOW << "WrongDog assignment operator called" << COLOR_RESET << std::endl;
 	if (this != &WrongDog) {
 		_type = WrongDog._type;
 	}

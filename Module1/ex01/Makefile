@@ -6,7 +6,7 @@
 #    By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/01 00:23:19 by cbernot           #+#    #+#              #
-#    Updated: 2023/10/26 11:13:12 by svanmeen         ###   ########.fr        #
+#    Updated: 2023/11/08 14:37:02 by svanmeen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,11 +14,13 @@ NAME	=	zombiehorde
 SRCS	=	main.cpp Zombie.cpp zombieHorde.cpp
 I_DIR	=	inc/
 
+INC		=	${I_DIR}Zombie.hpp
+
 CC			=	c++
 OBJS 		=	${SRCS:.cpp=.o}
 FLAGS		=	-Wall -Wextra -Werror -std=c++98
 
-%.o: %.cpp
+%.o: %.cpp	${INC}
 	${CC} ${FLAGS} -I ${I_DIR} -c $< -o $@
 
 ${NAME}: ${OBJS} 

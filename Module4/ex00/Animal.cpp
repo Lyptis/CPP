@@ -6,7 +6,7 @@
 /*   By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 13:10:11 by svanmeen          #+#    #+#             */
-/*   Updated: 2023/10/03 14:51:27 by svanmeen         ###   ########.fr       */
+/*   Updated: 2023/11/08 14:14:24 by svanmeen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,25 @@
 
 Animal::Animal(void){
 	_type = "default";
-	std::cout << "Animal default constructor called" << std::endl;
+	std::cout << COLOR_GREEN << "Animal default constructor called" << COLOR_RESET << std::endl;
 }
 
 Animal::Animal(std::string type){
 	_type = type;
-	std::cout << "Animal default constructor called" << std::endl;
+	std::cout << COLOR_GREEN << "Animal default constructor called" << COLOR_RESET << std::endl;
 }
 
 Animal::~Animal(){
-	std::cout << "Animal default destructor called" << std::endl;
+	std::cout << COLOR_RED << "Animal default destructor called" << COLOR_RESET << std::endl;
 }
 
 Animal::Animal(const Animal &Animal) {
-	std::cout << "Animal copy constructor called" << std::endl;
+	std::cout << COLOR_GREEN << "Animal copy constructor called" << COLOR_RESET << std::endl;
 	*this = Animal;
 }
 
 Animal	&Animal::operator=(const Animal &Animal) {
-	std::cout << "Animal assignment operator called" << std::endl;
+	std::cout << "	" << COLOR_YELLOW << "Animal assignment operator called" << COLOR_RESET << std::endl;
 	if (this != &Animal) {
 		_type = Animal._type;
 	}

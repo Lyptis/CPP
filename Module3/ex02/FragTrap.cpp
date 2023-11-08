@@ -6,7 +6,7 @@
 /*   By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 10:47:16 by svanmeen          #+#    #+#             */
-/*   Updated: 2023/09/27 11:04:54 by svanmeen         ###   ########.fr       */
+/*   Updated: 2023/11/08 13:50:24 by svanmeen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ FragTrap::FragTrap() : ClapTrap()
 	_hitPoints = 100;
 	_energyPoints = 100;
 	_attackDamage = 30;
-	std::cout << "FragTrap default constructor called" << std::endl;
+	std::cout << "	" << COLOR_GREEN << "FragTrap default constructor called" << COLOR_RESET << std::endl;
 }
 
 FragTrap::FragTrap(std::string name) : ClapTrap(name)
@@ -25,23 +25,23 @@ FragTrap::FragTrap(std::string name) : ClapTrap(name)
 	_hitPoints = 100;
 	_energyPoints = 100;
 	_attackDamage = 30;
-	std::cout << "FragTrap constructor called" << std::endl;
+	std::cout << "	" << COLOR_GREEN << "FragTrap name constructor called" << COLOR_RESET << std::endl;
 }
 
 FragTrap::FragTrap(const FragTrap &FragTrap)
 {
-	std::cout << "FragTrap copy constructor called" << std::endl;
+	std::cout << "	" << COLOR_GREEN << "FragTrap copy constructor called" << COLOR_RESET << std::endl;
 	*this = FragTrap;
 }
 
 FragTrap::~FragTrap()
 {
-	std::cout << "FragTrap destructor called" << std::endl;
+	std::cout << COLOR_RED << "FragTrap destructor called" << COLOR_RESET << std::endl;
 }
 
 FragTrap	&FragTrap::operator=(const FragTrap &FragTrap)
 {
-	std::cout << "FragTrap assignation operator called" << std::endl;
+	std::cout << COLOR_YELLOW << "FragTrap Copy assignment operator called" << COLOR_RESET << std::endl;
 	if (this != &FragTrap)
 	{
 		_name = FragTrap._name;

@@ -18,7 +18,7 @@ ScavTrap::ScavTrap() : ClapTrap()
 	_hitPoints = 100;
 	_energyPoints = 50;
 	_attackDamage = 20;
-	std::cout << "ScavTrap default constructor called" << std::endl;
+	std::cout << "	" << COLOR_GREEN << "ScavTrap default constructor called" << COLOR_RESET << std::endl;
 }
 
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
@@ -27,23 +27,23 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 	_hitPoints = 100;
 	_energyPoints = 50;
 	_attackDamage = 20;
-	std::cout << "ScavTrap name constructor called" << std::endl;
+	std::cout << "	" << COLOR_GREEN << "ScavTrap name constructor called" << COLOR_RESET << std::endl;
 }
 
 ScavTrap::ScavTrap(const ScavTrap &ScavTrap)
 {
-	std::cout << "ScavTrap copy constructor called" << std::endl;
+	std::cout << "	" << COLOR_GREEN << "ScavTrap copy constructor called" << COLOR_RESET << std::endl;
 	*this = ScavTrap;
 }
 
 ScavTrap::~ScavTrap()
 {
-	std::cout << "ScavTrap destructor called" << std::endl;
+	std::cout << COLOR_RED << "ScavTrap destructor called" << COLOR_RESET << std::endl;
 }
 
 ScavTrap	&ScavTrap::operator=(const ScavTrap &ScavTrap)
 {
-	std::cout << "ScavTrap assignation operator called" << std::endl;
+	std::cout << COLOR_YELLOW << "ScavTrap Copy assignment operator called" << COLOR_RESET << std::endl;
 	if (this != &ScavTrap)
 	{
 		_name = ScavTrap._name;

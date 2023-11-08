@@ -6,7 +6,7 @@
 /*   By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 14:25:24 by svanmeen          #+#    #+#             */
-/*   Updated: 2023/10/04 11:40:28 by svanmeen         ###   ########.fr       */
+/*   Updated: 2023/11/08 14:29:04 by svanmeen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 #include "include/Cat.hpp"
 #include "include/Brain.hpp"
 
-//Tests
 int	main(void)
 {
 	std::cout << "--------Dog a----------" << std::endl;

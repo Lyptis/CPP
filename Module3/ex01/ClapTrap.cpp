@@ -6,7 +6,7 @@
 /*   By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 18:56:21 by svanmeen          #+#    #+#             */
-/*   Updated: 2023/09/25 15:03:50 by svanmeen         ###   ########.fr       */
+/*   Updated: 2023/11/08 13:45:14 by svanmeen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,23 @@
 
 ClapTrap::ClapTrap() : _name("default"), _hitPoints(10), _energyPoints(10), _attackDamage(0)
 {
-	std::cout << "ClapTrap default constructor called" << std::endl;
+	std::cout << COLOR_GREEN << "ClapTrap default constructor called" << COLOR_RESET << std::endl;
 }
 
 ClapTrap::ClapTrap(std::string name) : _name(name), _hitPoints(10), _energyPoints(10), _attackDamage(0)
 {
-	std::cout << "ClapTrap name constructor called" << std::endl;
+	std::cout << COLOR_GREEN << "ClapTrap name constructor called" << COLOR_RESET << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap &ClapTrap)
 {
-	std::cout << "ClapTrap copy constructor called" << std::endl;
+	std::cout << COLOR_GREEN << "ClapTrap copy constructor called" << COLOR_RESET << std::endl;
 	*this = ClapTrap;
 }
 
 ClapTrap	&ClapTrap::operator=(const ClapTrap &ClapTrap)
 {
-	std::cout << "ClapTrap assignation operator called" << std::endl;
+	std::cout << COLOR_YELLOW << "ClapTrap assignation operator called" << COLOR_RESET << std::endl;
 	if (this != &ClapTrap)
 	{
 		_name = ClapTrap._name;
@@ -43,7 +43,7 @@ ClapTrap	&ClapTrap::operator=(const ClapTrap &ClapTrap)
 
 ClapTrap::~ClapTrap()
 {
-	std::cout << "ClapTrap destructor called" << std::endl;
+	std::cout << COLOR_RED << "ClapTrap destructor called" << COLOR_RESET << std::endl;
 }
 
 void	ClapTrap::attack(std::string const &target)

@@ -6,7 +6,7 @@
 /*   By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 12:45:35 by svanmeen          #+#    #+#             */
-/*   Updated: 2023/10/03 14:51:15 by svanmeen         ###   ########.fr       */
+/*   Updated: 2023/11/08 14:12:30 by svanmeen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,11 @@
 # define ANIMAL_HPP
 # include <string>
 # include <iostream>
+
+# define COLOR_RED "\033[0;31m"
+# define COLOR_GREEN "\033[0;32m"
+# define COLOR_RESET "\033[0m"
+# define COLOR_YELLOW "\033[0;33m"
 
 class	Animal
 {

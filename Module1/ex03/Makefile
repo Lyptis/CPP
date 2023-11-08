@@ -6,7 +6,7 @@
 #    By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/01 00:23:19 by cbernot           #+#    #+#              #
-#    Updated: 2023/10/26 11:13:43 by svanmeen         ###   ########.fr        #
+#    Updated: 2023/11/08 14:38:00 by svanmeen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,12 +17,15 @@ SRCS	=	main.cpp \
 			Weapon.cpp \
 
 I_DIR	=	include/
+INC		=	${I_DIR}HumanA.hpp \
+			${I_DIR}HumanB.hpp \
+			${I_DIR}Weapon.hpp
 
 CC			=	c++
 OBJS 		=	${SRCS:.cpp=.o}
 FLAGS		=	-Wall -Wextra -Werror -std=c++98
 
-%.o: %.cpp
+%.o: %.cpp	${INC}
 	${CC} ${FLAGS} -I ${I_DIR} -c $< -o $@
 
 ${NAME}: ${OBJS} 
