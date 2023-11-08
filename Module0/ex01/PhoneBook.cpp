@@ -6,42 +6,53 @@
 /*   By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/29 21:27:38 by svanmeen          #+#    #+#             */
-/*   Updated: 2023/10/04 11:45:43 by svanmeen         ###   ########.fr       */
+/*   Updated: 2023/11/08 10:26:42 by svanmeen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 
-PhoneBook::PhoneBook(){
+PhoneBook::PhoneBook()
+{
 	std::cout << "PhoneBook constructor called" << std::endl;
 }
 
-PhoneBook::~PhoneBook(){
+PhoneBook::~PhoneBook()
+{
 	std::cout << "PhoneBook destructor called" << std::endl;
 }
 
-void	PhoneBook::Add(){
-	static int	i = 0;
+void PhoneBook::Add()
+{
+	static int i = 0;
 
-	if (i == 8){
+	if (i == 8)
+	{
 		i = 0;
 		this->contacts[i].Fill();
 	}
 	else
 		this->contacts[i].Fill();
 	i++;
-	return ;
+	return;
 }
 
-void	PhoneBook::Search(){
-	int	i;
+void PhoneBook::Search()
+{
+	int i;
 
 	i = 0;
 	std::cout << "---------------------------------------------" << std::endl;
 	std::cout << "|" << std::setw(11) << "|" << std::setw(11) << "|" << std::setw(11) << "|" << std::setw(11) << "|" << std::endl;
-	std::cout << "|" << std::setw(10) << "Index" << "|" << "First Name" << "|" << std::setw(10) << "Last Name" << "|" << std::setw(10) << "Nickname" << "|" << std::endl;
+	std::cout << "|" << std::setw(10) << "Index"
+			  << "|"
+			  << "First Name"
+			  << "|" << std::setw(10) << "Last Name"
+			  << "|" << std::setw(10) << "Nickname"
+			  << "|" << std::endl;
 	std::cout << "---------------------------------------------" << std::endl;
-	while (i < 8){
+	while (i < 8)
+	{
 		if (this->contacts[i].get_first_name().length() > 10)
 			std::cout << "|" << std::setw(10) << i << "|" << this->contacts[i].get_first_name().substr(0, 9) << ".|";
 		else
@@ -60,11 +71,15 @@ void	PhoneBook::Search(){
 	std::cout << "---------------------------------------------" << std::endl;
 	std::cout << "Enter an index" << std::endl;
 	std::cin >> i;
-	if (i < 0 || i > 7){
+	if (i < 0 || i > 7)
+	{
 		std::cout << "Invalid index" << std::endl;
-		return ;
+		return;
 	}
-	else{
+	else if (this->contacts[i].get_first_name() == "")
+		std::cout << "Contact not defined" << std::endl;
+	else
+	{
 		std::cout << "First Name: " << this->contacts[i].get_first_name() << std::endl;
 		std::cout << "Last Name: " << this->contacts[i].get_last_name() << std::endl;
 		std::cout << "Nickname: " << this->contacts[i].get_nickname() << std::endl;
