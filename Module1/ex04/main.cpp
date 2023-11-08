@@ -6,7 +6,7 @@
 /*   By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 16:07:53 by svanmeen          #+#    #+#             */
-/*   Updated: 2023/09/12 17:31:47 by svanmeen         ###   ########.fr       */
+/*   Updated: 2023/11/08 11:05:50 by svanmeen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,28 @@
 #include <string>
 #include <fstream>
 
-
-void	errorPrint()
+void errorPrint()
 {
 	std::cout << "Error: invalid arguments" << std::endl;
 }
 
-std::string	SplitFilename (const std::string& str)
+std::string SplitFilename(const std::string &str)
 {
 	std::size_t found = str.find_last_of("/\\");
-	return(str.substr(found+1));
+	return (str.substr(found + 1));
 }
 
-int	main(int argc, char **argv)
+int main(int argc, char **argv)
 {
-	std::string	str;
-	std::string	str1(argv[2]);
-	std::string	str2(argv[3]);
-	size_t	pos = 0;
-	size_t	len = 0;
+	std::string str;
+
+	size_t pos = 0;
+	size_t len = 0;
 
 	if (argc != 4)
 		return (errorPrint(), 1);
+	std::string str1(argv[2]);
+	std::string str2(argv[3]);
 	std::ifstream input(argv[1]);
 	std::ofstream output(SplitFilename(argv[1]).append(".replace").c_str());
 	if (!input.is_open() || !output.is_open())
