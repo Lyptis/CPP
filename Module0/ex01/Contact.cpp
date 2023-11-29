@@ -6,7 +6,7 @@
 /*   By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/26 15:16:09 by svanmeen          #+#    #+#             */
-/*   Updated: 2023/10/04 11:43:03 by svanmeen         ###   ########.fr       */
+/*   Updated: 2023/11/29 10:59:13 by svanmeen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,18 +25,33 @@ Contact::~Contact(){
 }
 
 void Contact::Fill(){
+	if (first_name != "")
+		this->Clear();
 	std::cout << "Enter First Name" << std::endl;
-	std::getline(std::cin, this->first_name);
+	while (first_name == "")
+		std::getline(std::cin, this->first_name);
 	std::cout << "Enter Last Name" << std::endl;
-	std::getline(std::cin, this->last_name);
+	while (last_name == "")
+		std::getline(std::cin, this->last_name);
 	std::cout << "Enter Nickname" << std::endl;
-	std::getline(std::cin, this->nickname);
+	while (nickname == "")	
+		std::getline(std::cin, this->nickname);
 	std::cout << "Enter Phone Number" << std::endl;
-	std::getline(std::cin, this->phone_number);
+	while (phone_number == "")	
+		std::getline(std::cin, this->phone_number);
 	std::cout << "Enter Secret" << std::endl;
-	std::getline(std::cin, this->secret);
+	while (secret == "")	
+		std::getline(std::cin, this->secret);
 	this->timestamp = std::time(NULL);
 	std::cout << "Contact added" << std::endl;
+}
+
+void	Contact::Clear() {
+	first_name = "";
+	last_name = "";
+	nickname = "";
+	phone_number = "";
+	secret = "";
 }
 
 std::string Contact::get_first_name(){

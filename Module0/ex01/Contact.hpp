@@ -6,7 +6,7 @@
 /*   By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/26 15:06:17 by svanmeen          #+#    #+#             */
-/*   Updated: 2023/09/04 16:05:54 by svanmeen         ###   ########.fr       */
+/*   Updated: 2023/11/29 10:00:16 by svanmeen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ public:
 	Contact();
 	~Contact();
 	void	Fill();
+	void	Clear();
 	std::string	get_first_name();
 	std::string	get_last_name();
 	std::string	get_nickname();
