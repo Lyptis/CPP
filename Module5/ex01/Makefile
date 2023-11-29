@@ -6,16 +6,18 @@
 #    By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/01 00:23:19 by svanmeen          #+#    #+#              #
-#    Updated: 2023/11/21 15:03:31 by svanmeen         ###   ########.fr        #
+#    Updated: 2023/11/29 14:37:08 by svanmeen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	form
 SRCS	=	main.cpp \
-			Bureaucrat.cpp 
+			Bureaucrat.cpp \
+			Form.cpp
 
 I_DIR	=	include/
-INC		=	${I_DIR}Bureaucrat.hpp
+INC		=	${I_DIR}Bureaucrat.hpp \
+			${I_DIR}Form.hpp
 
 CC			=	c++
 OBJS 		=	${SRCS:.cpp=.o}

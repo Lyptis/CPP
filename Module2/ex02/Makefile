@@ -5,10 +5,12 @@
 #                                                     +:+ +:+         +:+      #
 #    By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/03/01 00:23:19 by cbernot           #+#    #+#              #
-#    Updated: 2023/11/08 14:40:00 by svanmeen         ###   ########.fr        #
+#    Created: 2023/11/29 13:02:57 by svanmeen          #+#    #+#              #
+#    Updated: 2023/11/29 13:02:58 by svanmeen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
+
 
 NAME	=	fixed
 SRCS	=	main.cpp \

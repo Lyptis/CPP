@@ -6,11 +6,12 @@
 /*   By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 13:21:35 by svanmeen          #+#    #+#             */
-/*   Updated: 2023/11/21 14:47:06 by svanmeen         ###   ########.fr       */
+/*   Updated: 2023/11/29 15:11:12 by svanmeen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "include/Bureaucrat.hpp"
+#include "include/Form.hpp"
 
 Bureaucrat::Bureaucrat() {
 	std::cout << "Bureaucrat default created" << std::endl;
@@ -59,6 +60,17 @@ void	Bureaucrat::decGrade(void) {
 	if (_grade + 1 > 150)
 		throw GradeTooHighException();
 	_grade++;
+}
+
+void	Bureaucrat::signForm(Form &form){
+	try {
+		form.beSigned(*this);
+		std::cout << this->getName() << " signed " << form.getName() << std::endl;
+	}
+	catch (std::exception &e)
+	{
+		std::cout << this->getName() << " coudln't signed " << form.getName() << " because " << e.what() << std::endl;
+	}
 }
 
 std::ostream	&operator<<(std::ostream &cout, const Bureaucrat &bur){

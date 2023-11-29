@@ -6,13 +6,13 @@
 /*   By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 15:18:31 by svanmeen          #+#    #+#             */
-/*   Updated: 2023/11/21 15:45:15 by svanmeen         ###   ########.fr       */
+/*   Updated: 2023/11/29 14:38:56 by svanmeen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "include/Form.hpp"
 
-Form::Form(void){
+Form::Form(void) :_signed(false), _sGrade(150), _eGrade(150) {
 	std::cout << "Form default constructor called" << std::endl;
 }
 
@@ -62,7 +62,11 @@ unsigned int Form::geteGrade() const {
 }
 
 void	Form::beSigned(Bureaucrat &Bureaucrat) {
-	
+	if (_signed == true)
+		throw FormAlreadySignedException();
+	if (Bureaucrat.getGrade() > this->getsGrade())
+		throw FormGradeTooLowException();
+	_signed = true;
 }
 
 std::ostream	&operator<<(std::ostream &cout, const Form &form)
@@ -71,3 +75,14 @@ std::ostream	&operator<<(std::ostream &cout, const Form &form)
 	return (cout);
 }
 
+const char *FormGradeTooLowException::what() const throw() {
+	return("Form::GradeTooLowException");
+}
+
+const char *FormGradeTooHighException::what() const throw() {
+	return("Form::GradeTooHighException");
+}
+
+const char *FormAlreadySignedException::what() const throw() {
+	return("Form::AlreadySignedException");
+}
