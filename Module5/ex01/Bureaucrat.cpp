@@ -6,7 +6,7 @@
 /*   By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 13:21:35 by svanmeen          #+#    #+#             */
-/*   Updated: 2023/11/29 15:11:12 by svanmeen         ###   ########.fr       */
+/*   Updated: 2023/11/30 10:41:56 by svanmeen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,13 +63,14 @@ void	Bureaucrat::decGrade(void) {
 }
 
 void	Bureaucrat::signForm(Form &form){
-	try {
+	try
+	{
 		form.beSigned(*this);
 		std::cout << this->getName() << " signed " << form.getName() << std::endl;
 	}
 	catch (std::exception &e)
 	{
-		std::cout << this->getName() << " coudln't signed " << form.getName() << " because " << e.what() << std::endl;
+		std::cout << this->getName() << " couldn't signed " << form.getName() << " because " << e.what() << std::endl;
 	}
 }
 

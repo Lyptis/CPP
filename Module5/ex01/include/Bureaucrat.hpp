@@ -6,7 +6,7 @@
 /*   By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 13:10:11 by svanmeen          #+#    #+#             */
-/*   Updated: 2023/11/29 15:12:25 by svanmeen         ###   ########.fr       */
+/*   Updated: 2023/11/30 10:59:03 by svanmeen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 # include <string>
 # include <iostream>
 # include "Form.hpp"
+
+class Form;
 
 class	GradeTooHighException : public std::exception
 {

@@ -6,13 +6,15 @@
 /*   By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 15:03:50 by svanmeen          #+#    #+#             */
-/*   Updated: 2023/11/29 15:12:38 by svanmeen         ###   ########.fr       */
+/*   Updated: 2023/11/30 10:58:49 by svanmeen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FORM_HPP
 # define FORM_HPP
 # include "Bureaucrat.hpp"
+
+class Bureaucrat;
 
 class FormAlreadySignedException : public std::exception
 {
