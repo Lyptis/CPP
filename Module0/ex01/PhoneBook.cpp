@@ -6,7 +6,7 @@
 /*   By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/29 21:27:38 by svanmeen          #+#    #+#             */
-/*   Updated: 2023/11/29 12:46:38 by svanmeen         ###   ########.fr       */
+/*   Updated: 2023/11/30 12:15:23 by svanmeen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ void PhoneBook::Search()
 			  << "|" << std::setw(10) << "Nickname"
 			  << "|" << std::endl;
 	std::cout << "---------------------------------------------" << std::endl;
-	while (i < 8 && contacts[i].get_first_name() != "")
+	while (i < 8 && contacts[i].get_first_name().empty())
 	{
 		if (this->contacts[i].get_first_name().length() > 10)
 			std::cout << "|" << std::setw(10) << i << "|" << this->contacts[i].get_first_name().substr(0, 9) << ".|";
@@ -72,7 +72,8 @@ void PhoneBook::Search()
 	}
 	std::cout << "---------------------------------------------" << std::endl;
 	std::cout << "Enter an index" << std::endl;
-	std::cin >> str;
+	// i = getindex();
+	getline(std::cin, str);
 	if (str.length() > 1)
 	{
 		std::cout << "Invalid index" << std::endl;
@@ -95,4 +96,14 @@ void PhoneBook::Search()
 		std::cout << "Phone Number: " << this->contacts[c - 48].get_phone_number() << std::endl;
 		std::cout << "Secret: " << this->contacts[c - 48].get_secret() << std::endl;
 	}
+}
+
+int	getindex(void) {
+	std::string input;
+	std::string charset;
+
+	getline(std::cin, input);
+	if(input.empty() || std::cin.eof() || input.size() > 1)
+		return (-1);
+	input.compare()
 }
