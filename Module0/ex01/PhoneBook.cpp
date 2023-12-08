@@ -6,11 +6,24 @@
 /*   By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/29 21:27:38 by svanmeen          #+#    #+#             */
-/*   Updated: 2023/11/30 12:15:23 by svanmeen         ###   ########.fr       */
+/*   Updated: 2023/12/08 15:44:12 by svanmeen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
+
+int	getindex(void) {
+	int	i;
+	std::string input;
+
+	getline(std::cin, input);
+	if(input.empty() || std::cin.eof() || input.size() > 1)
+		return (-1);
+	i = input.find_first_of("01234567");
+	if (i < 0 || i > 7)
+		return (-1);
+	return (i);
+}
 
 PhoneBook::PhoneBook()
 {
@@ -40,7 +53,6 @@ void PhoneBook::Add()
 void PhoneBook::Search()
 {
 	std::string	str;
-	char		c;
 	int			i;
 
 	i = 0;
@@ -53,7 +65,7 @@ void PhoneBook::Search()
 			  << "|" << std::setw(10) << "Nickname"
 			  << "|" << std::endl;
 	std::cout << "---------------------------------------------" << std::endl;
-	while (i < 8 && contacts[i].get_first_name().empty())
+	while (i < 8 && !(contacts[i].get_first_name().empty()))
 	{
 		if (this->contacts[i].get_first_name().length() > 10)
 			std::cout << "|" << std::setw(10) << i << "|" << this->contacts[i].get_first_name().substr(0, 9) << ".|";
@@ -72,38 +84,21 @@ void PhoneBook::Search()
 	}
 	std::cout << "---------------------------------------------" << std::endl;
 	std::cout << "Enter an index" << std::endl;
-	// i = getindex();
-	getline(std::cin, str);
-	if (str.length() > 1)
+	i = getindex();
+	if (i < 0)
 	{
 		std::cout << "Invalid index" << std::endl;
 		return;
 	}
-	c = str[0];
-	std::cin.clear();
-	if (c < 48 || c > 55)
-	{
-		std::cout << "Invalid index" << std::endl;
-		return;
-	}
-	else if (this->contacts[c - 48].get_first_name() == "")
+	else if (this->contacts[i].get_first_name() == "")
 		std::cout << "Contact not defined" << std::endl;
 	else
 	{
-		std::cout << "First Name: " << this->contacts[c - 48].get_first_name() << std::endl;
-		std::cout << "Last Name: " << this->contacts[c - 48].get_last_name() << std::endl;
-		std::cout << "Nickname: " << this->contacts[c - 48].get_nickname() << std::endl;
-		std::cout << "Phone Number: " << this->contacts[c - 48].get_phone_number() << std::endl;
-		std::cout << "Secret: " << this->contacts[c - 48].get_secret() << std::endl;
+		std::cout << "First Name: " << this->contacts[i].get_first_name() << std::endl;
+		std::cout << "Last Name: " << this->contacts[i].get_last_name() << std::endl;
+		std::cout << "Nickname: " << this->contacts[i].get_nickname() << std::endl;
+		std::cout << "Phone Number: " << this->contacts[i].get_phone_number() << std::endl;
+		std::cout << "Secret: " << this->contacts[i].get_secret() << std::endl;
 	}
 }
 
-int	getindex(void) {
-	std::string input;
-	std::string charset;
-
-	getline(std::cin, input);
-	if(input.empty() || std::cin.eof() || input.size() > 1)
-		return (-1);
-	input.compare()
-}
