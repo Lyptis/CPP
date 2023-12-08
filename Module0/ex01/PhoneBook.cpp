@@ -6,7 +6,7 @@
 /*   By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/29 21:27:38 by svanmeen          #+#    #+#             */
-/*   Updated: 2023/12/08 15:44:12 by svanmeen         ###   ########.fr       */
+/*   Updated: 2023/12/08 15:51:16 by svanmeen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,11 +86,8 @@ void PhoneBook::Search()
 	std::cout << "Enter an index" << std::endl;
 	i = getindex();
 	if (i < 0)
-	{
 		std::cout << "Invalid index" << std::endl;
-		return;
-	}
-	else if (this->contacts[i].get_first_name() == "")
+	else if (this->contacts[i].get_first_name().empty())
 		std::cout << "Contact not defined" << std::endl;
 	else
 	{
