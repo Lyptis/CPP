@@ -6,7 +6,7 @@
 /*   By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 13:09:37 by svanmeen          #+#    #+#             */
-/*   Updated: 2023/11/21 15:02:28 by svanmeen         ###   ########.fr       */
+/*   Updated: 2023/12/08 15:52:53 by svanmeen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,8 @@ int main(void)
 		std::cout << bob << std::endl;
 		
 	}
-	catch (GradeTooHighException const& e)
+	catch (std::exception const& e)
 	{
 		std::cout << e.what() << std::endl;
 	}
-	catch (GradeTooLowException const& e)
-	{
-		std::cout << e.what() << std::endl;
-	}
-
 }
