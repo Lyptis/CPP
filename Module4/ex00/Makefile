@@ -6,7 +6,7 @@
 #    By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/01 00:23:19 by svanmeen          #+#    #+#              #
-#    Updated: 2023/10/26 11:17:29 by svanmeen         ###   ########.fr        #
+#    Updated: 2024/01/17 13:33:10 by svanmeen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,12 +20,18 @@ SRCS	=	main.cpp		\
 			WrongDog.cpp	\
 
 I_DIR	=	include/
+INC		=	${I_DIR}Animal.hpp \
+			${I_DIR}Cat.hpp \
+			${I_DIR}Dog.hpp \
+			${I_DIR}WrongAnimal.hpp \
+			${I_DIR}WrongCat.hpp \
+			${I_DIR}WrongDog.hpp
 
 CC			=	c++
 OBJS 		=	${SRCS:.cpp=.o}
 FLAGS		=	-Wall -Wextra -Werror -std=c++98 -I ${I_DIR}
 
-%.o: %.cpp
+%.o: %.cpp ${INC}
 	${CC} ${FLAGS} -c $< -o $@
 
 ${NAME}: ${OBJS} 

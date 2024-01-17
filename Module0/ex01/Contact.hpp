@@ -6,7 +6,7 @@
 /*   By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/26 15:06:17 by svanmeen          #+#    #+#             */
-/*   Updated: 2023/11/29 10:00:16 by svanmeen         ###   ########.fr       */
+/*   Updated: 2024/01/17 13:10:11 by svanmeen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ private:
 	std::string	nickname;
 	std::string	phone_number;
 	std::string	secret;
-	std::time_t		timestamp;
 
 public:
 	Contact();

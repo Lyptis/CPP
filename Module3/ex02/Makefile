@@ -6,7 +6,7 @@
 #    By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/01 00:23:19 by cbernot           #+#    #+#              #
-#    Updated: 2023/10/26 11:17:11 by svanmeen         ###   ########.fr        #
+#    Updated: 2024/01/17 13:27:17 by svanmeen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,12 +17,16 @@ SRCS	=	main.cpp		\
 			FragTrap.cpp	\
 
 I_DIR	=	include/
+INC		=	${I_DIR}ClapTrap.hpp \
+			${I_DIR}ScavTrap.hpp \
+			${I_DIR}FragTrap.hpp
+
 
 CC			=	c++
 OBJS 		=	${SRCS:.cpp=.o}
 FLAGS		=	-Wall -Wextra -Werror -std=c++98 -I ${I_DIR}
 
-%.o: %.cpp
+%.o: %.cpp ${INC}
 	${CC} ${FLAGS} -c $< -o $@
 
 ${NAME}: ${OBJS} 

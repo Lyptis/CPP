@@ -6,7 +6,7 @@
 /*   By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/29 21:27:38 by svanmeen          #+#    #+#             */
-/*   Updated: 2023/12/08 15:51:16 by svanmeen         ###   ########.fr       */
+/*   Updated: 2024/01/17 14:33:20 by svanmeen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	getindex(void) {
 	getline(std::cin, input);
 	if(input.empty() || std::cin.eof() || input.size() > 1)
 		return (-1);
-	i = input.find_first_of("01234567");
+	i = input[0] - 48; 	
 	if (i < 0 || i > 7)
 		return (-1);
 	return (i);
