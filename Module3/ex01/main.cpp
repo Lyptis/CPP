@@ -6,7 +6,7 @@
 /*   By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 19:03:24 by svanmeen          #+#    #+#             */
-/*   Updated: 2023/10/26 11:16:00 by svanmeen         ###   ########.fr       */
+/*   Updated: 2024/01/31 13:16:28 by svanmeen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,15 @@
 
 int		main()
 {
-	ClapTrap	ClapTrap("Bob");
-	ScavTrap	ScavTrap("Phil");
+	ClapTrap	Bob("Bob");
+	ScavTrap	Phil("Phil");
 
-	ClapTrap.attack("target");
-	ClapTrap.takeDamage(5);
-	ClapTrap.beRepaired(5);
-	ScavTrap.attack("target");
-	ScavTrap.takeDamage(5);
-	ScavTrap.beRepaired(5);
-	ScavTrap.guardGate();
+	Bob.attack("target");
+	Bob.takeDamage(5);
+	Bob.beRepaired(5);
+	Phil.attack("target");
+	Phil.takeDamage(5);
+	Phil.beRepaired(5);
+	Phil.guardGate();
 	return (0);
 }
