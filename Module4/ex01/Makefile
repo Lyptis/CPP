@@ -6,7 +6,7 @@
 #    By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/01 00:23:19 by svanmeen          #+#    #+#              #
-#    Updated: 2023/11/08 14:31:52 by svanmeen         ###   ########.fr        #
+#    Updated: 2024/02/05 10:43:18 by svanmeen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,11 +19,16 @@ SRCS	=	main.cpp		\
 
 I_DIR	=	include/
 
+INC		=	${I_DIR}Animal.hpp \
+			${I_DIR}Brain.hpp \
+			${I_DIR}Cat.hpp \
+			${I_DIR}Dog.hpp
+
 CC			=	c++
 OBJS 		=	${SRCS:.cpp=.o}
 FLAGS		=	-Wall -Wextra -Werror -std=c++98 -I ${I_DIR}
 
-%.o: %.cpp
+%.o: %.cpp ${INC}
 	${CC} ${FLAGS} -c $< -o $@
 
 ${NAME}: ${OBJS}

@@ -6,7 +6,7 @@
 /*   By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 15:24:12 by svanmeen          #+#    #+#             */
-/*   Updated: 2023/11/08 14:24:17 by svanmeen         ###   ########.fr       */
+/*   Updated: 2024/02/05 11:19:53 by svanmeen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,12 @@ Brain	&Brain::operator=(const Brain &Brain) {
 }
 
 void	Brain::setIdeas(int index, std::string idea) {
-	_ideas[index] = idea;
+	if (index < 100 && index > 0)
+		_ideas[index] = idea;
 }
 
 std::string	Brain::getIdeas(int index) const {
-	return (_ideas[index]);
+	if (index < 100 && index > 0)
+		return (_ideas[index]);
+	return ("Invalid index");
 }

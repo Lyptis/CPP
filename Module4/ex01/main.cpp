@@ -6,7 +6,7 @@
 /*   By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 14:25:24 by svanmeen          #+#    #+#             */
-/*   Updated: 2023/11/08 14:29:04 by svanmeen         ###   ########.fr       */
+/*   Updated: 2024/02/05 11:12:32 by svanmeen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,16 @@ int	main(void)
 	std::cout << "---------------------" << std::endl;
 	a->makeSound();
 	i->makeSound();
+	a->think(100);
+	std::cout << std::endl;
+	{
+		Dog	abc;
+		{
+			Dog def;
+			def = abc;
+		}
+	}
+	std::cout << std::endl;
 	std::cout << "--------delete a----------" << std::endl;
 	delete a;
 	std::cout << "---------------------" << std::endl;

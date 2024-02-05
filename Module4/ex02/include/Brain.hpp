@@ -6,13 +6,18 @@
 /*   By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 15:20:09 by svanmeen          #+#    #+#             */
-/*   Updated: 2023/10/04 11:29:11 by svanmeen         ###   ########.fr       */
+/*   Updated: 2024/02/05 11:24:46 by svanmeen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef BRAIN_HPP
 # define BRAIN_HPP
 # include <string>
+
+# define COLOR_RED "\033[0;31m"
+# define COLOR_GREEN "\033[0;32m"
+# define COLOR_RESET "\033[0m"
+# define COLOR_YELLOW "\033[0;33m"
 
 class	Brain
 {

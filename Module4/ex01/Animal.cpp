@@ -6,7 +6,7 @@
 /*   By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 13:10:11 by svanmeen          #+#    #+#             */
-/*   Updated: 2023/11/08 14:20:41 by svanmeen         ###   ########.fr       */
+/*   Updated: 2024/02/05 10:57:16 by svanmeen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,3 +43,6 @@ void	Animal::makeSound() const{
 	std::cout << "This is an animal sound" << std::endl;
 }
 
+void	Animal::think(int i) const{
+	std::cout << "This is a animal tought at " << i << std::endl;
+}
