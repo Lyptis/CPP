@@ -6,7 +6,7 @@
 /*   By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 14:10:41 by svanmeen          #+#    #+#             */
-/*   Updated: 2023/11/08 12:24:32 by svanmeen         ###   ########.fr       */
+/*   Updated: 2024/02/05 10:02:14 by svanmeen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,19 +75,19 @@ std::ostream	&operator<<(std::ostream &cout, const Fixed &fixed)
 }
 
 bool Fixed::operator>(const Fixed &fixed) const {
-	return (fixed.getRawBits() > _fixedPointValue);
-}
-
-bool Fixed::operator<(const Fixed &fixed) const {
 	return (fixed.getRawBits() < _fixedPointValue);
 }
 
+bool Fixed::operator<(const Fixed &fixed) const {
+	return (fixed.getRawBits() > _fixedPointValue);
+}
+
 bool Fixed::operator>=(const Fixed &fixed) const {
-	return (fixed.getRawBits() >= _fixedPointValue);
+	return (fixed.getRawBits() <= _fixedPointValue);
 }
 
 bool Fixed::operator<=(const Fixed &fixed) const {
-	return (fixed.getRawBits() <= _fixedPointValue);
+	return (fixed.getRawBits() >= _fixedPointValue);
 }
 
 bool Fixed::operator==(const Fixed &fixed) const {
