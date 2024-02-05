@@ -12,6 +12,8 @@
 
 #include "include/ScavTrap.hpp"
 
+
+/// @brief default constructor
 ScavTrap::ScavTrap() : ClapTrap()
 {
 	_hitPoints = 100;
@@ -28,6 +30,8 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 	std::cout << "	" << COLOR_GREEN << "ScavTrap name constructor called" << COLOR_RESET << std::endl;
 }
 
+/// @brief Copy constructor
+/// @param ScavTrap 
 ScavTrap::ScavTrap(const ScavTrap &ScavTrap)
 {
 	std::cout << "	" << COLOR_GREEN << "ScavTrap copy constructor called" << COLOR_RESET << std::endl;
@@ -39,6 +43,10 @@ ScavTrap::~ScavTrap()
 	std::cout << COLOR_RED << "ScavTrap destructor called" << COLOR_RESET << std::endl;
 }
 
+
+/// @brief Copy assignment operator
+/// @param ScavTrap 
+/// @return copy of `ScavTrap`
 ScavTrap	&ScavTrap::operator=(const ScavTrap &ScavTrap)
 {
 	std::cout << COLOR_YELLOW << "ScavTrap Copy assignment operator called" << COLOR_RESET << std::endl;
