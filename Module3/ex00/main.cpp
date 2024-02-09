@@ -6,7 +6,7 @@
 /*   By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 11:50:33 by svanmeen          #+#    #+#             */
-/*   Updated: 2024/01/31 13:20:21 by svanmeen         ###   ########.fr       */
+/*   Updated: 2024/02/09 16:46:20 by svanmeen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,13 @@ int main(void){
 
 	real_diamondHorse.attack("a wall");
 	real_diamondHorse.takeDamage(15);
+	real_diamondHorse.takeDamage(15);
 	real_diamondHorse.beRepaired(4);
 	real_diamondHorse.beRepaired(4);
 	real_diamondHorse.beRepaired(4);
+	real_diamondHorse.takeDamage(15);
+	real_diamondHorse.takeDamage(15);
+	real_diamondHorse.attack("a wall");
+
+
 }

@@ -6,7 +6,7 @@
 /*   By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 19:03:24 by svanmeen          #+#    #+#             */
-/*   Updated: 2024/01/31 13:16:28 by svanmeen         ###   ########.fr       */
+/*   Updated: 2024/02/09 16:39:12 by svanmeen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ int		main()
 	Bob.beRepaired(5);
 	Phil.attack("target");
 	Phil.takeDamage(5);
+	Phil.takeDamage(75);
+	Phil.takeDamage(75);
 	Phil.beRepaired(5);
 	Phil.guardGate();
 	return (0);
