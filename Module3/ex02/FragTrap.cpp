@@ -6,7 +6,7 @@
 /*   By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 10:47:16 by svanmeen          #+#    #+#             */
-/*   Updated: 2024/02/09 17:17:23 by svanmeen         ###   ########.fr       */
+/*   Updated: 2024/02/11 11:07:25 by svanmeen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,5 +67,10 @@ void	FragTrap::attack(std::string const &target)
 
 void	FragTrap::highFivesGuys(void)
 {
-	std::cout << "High Fives Guys ?!" << std::endl;
+	if (_hitPoints == 0)
+		std::cout << _name << " is requesting : \"Wanna do a amazing High Fives Guys ?!\" while not having hit points left." << std::endl;
+	else if (_energyPoints == 0)
+		std::cout << _name << " is requesting : \"Wanna do a amazing High Fives Guys ?!\" while not having energy points left" << std::endl;
+	else
+		std::cout << _name << " is requesting : \"Wanna do a amazing High Fives Guys ?!\"" << std::endl;
 }

@@ -6,17 +6,18 @@
 /*   By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 11:50:33 by svanmeen          #+#    #+#             */
-/*   Updated: 2024/02/09 16:46:20 by svanmeen         ###   ########.fr       */
+/*   Updated: 2024/02/11 10:55:27 by svanmeen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "include/ClapTrap.hpp"
 
 int main(void){
-	ClapTrap	diamondHorse("Diamond Horse");
+	ClapTrap 	diamondHorse("Diamond Horse");
 	ClapTrap	real_diamondHorse;
 
 	real_diamondHorse = diamondHorse;
+
 
 	real_diamondHorse.attack("a wall");
 	real_diamondHorse.takeDamage(15);

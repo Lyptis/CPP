@@ -43,7 +43,6 @@ ScavTrap::~ScavTrap()
 	std::cout << COLOR_RED << "ScavTrap destructor called" << COLOR_RESET << std::endl;
 }
 
-
 /// @brief Copy assignment operator
 /// @param ScavTrap 
 /// @return copy of `ScavTrap`

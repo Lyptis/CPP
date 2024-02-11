@@ -6,7 +6,7 @@
 /*   By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 18:27:40 by svanmeen          #+#    #+#             */
-/*   Updated: 2024/02/09 16:34:38 by svanmeen         ###   ########.fr       */
+/*   Updated: 2024/02/09 18:08:07 by svanmeen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,11 @@ class	ClapTrap
 		ClapTrap(const ClapTrap &ClapTrap);
 		ClapTrap	&operator=(const ClapTrap &ClapTrap);
 		~ClapTrap();
+
+		std::string getName(void) const;
+		int getHitPoints(void) const;
+		int getEnergyPoints(void) const;
+		int getAttackDamage(void) const;
 
 		void			attack(std::string const &target);
 		void			takeDamage(unsigned int amount);

@@ -29,7 +29,7 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 	std::cout << "	" << COLOR_GREEN << "ScavTrap name constructor called" << COLOR_RESET << std::endl;
 }
 
-/// @brief copy constructor
+/// @brief Copy constructor
 /// @param ScavTrap 
 ScavTrap::ScavTrap(const ScavTrap &ScavTrap)
 {
