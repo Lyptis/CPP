@@ -6,7 +6,7 @@
 /*   By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 12:45:35 by svanmeen          #+#    #+#             */
-/*   Updated: 2024/02/05 11:21:57 by svanmeen         ###   ########.fr       */
+/*   Updated: 2024/02/11 13:40:02 by svanmeen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,9 @@ class	Animal
 		virtual ~Animal();
 		Animal	&operator=(const Animal &Animal);
 
+		std::string		getType(void) const;
+
 		virtual void	makeSound(void) const = 0;
-		virtual void	think(int i) const = 0;
 };
 
 #endif

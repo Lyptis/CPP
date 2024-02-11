@@ -6,7 +6,7 @@
 /*   By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 14:25:24 by svanmeen          #+#    #+#             */
-/*   Updated: 2024/02/05 11:12:32 by svanmeen         ###   ########.fr       */
+/*   Updated: 2024/02/11 13:37:35 by svanmeen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,12 @@
 
 int	main(void)
 {
-	std::cout << "--------Dog a----------" << std::endl;
 	Animal* a = new Dog();
 	std::cout << "---------------------" << std::endl;
-	std::cout << "--------Cat i----------" << std::endl;
 	Animal* i = new Cat();
 	std::cout << "---------------------" << std::endl;
 	a->makeSound();
 	i->makeSound();
-	a->think(100);
 	std::cout << std::endl;
 	{
 		Dog	abc;
@@ -35,10 +32,8 @@ int	main(void)
 		}
 	}
 	std::cout << std::endl;
-	std::cout << "--------delete a----------" << std::endl;
 	delete a;
 	std::cout << "---------------------" << std::endl;
-	std::cout << "--------delete i----------" << std::endl;
 	delete i;
 	std::cout << "---------------------" << std::endl;
 	return (0);

@@ -6,7 +6,7 @@
 /*   By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 14:25:24 by svanmeen          #+#    #+#             */
-/*   Updated: 2023/10/03 15:15:28 by svanmeen         ###   ########.fr       */
+/*   Updated: 2024/02/11 11:28:45 by svanmeen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,40 +17,39 @@
 #include "include/WrongCat.hpp"
 #include "include/WrongDog.hpp"
 
-//Tests
 int	main(void)
 {
-	const Animal* meta = new Animal();
-	const Animal* j = new Dog();
-	const Animal* i = new Cat();
-	const WrongAnimal* wrongMeta = new WrongAnimal();
-	const WrongAnimal* wrongJ = new WrongDog();
-	const WrongAnimal* wrongI = new WrongCat();
+	const Animal* animal = new Animal();
+	const Animal* dog = new Dog();
+	const Animal* cat = new Cat();
+	const WrongAnimal* wrongAnimal = new WrongAnimal();
+	const WrongAnimal* wrongDog = new WrongDog();
+	const WrongAnimal* wrongCat = new WrongCat();
 
-	std::cout << ">>>>>>>Test 1: " << std::endl;
+	std::cout << ">>>>>>>Right animal: " << std::endl;
 	std::cout << std::endl;
-	std::cout << "meta->makeSound(): " << std::endl;
-	meta->makeSound();
-	std::cout << "j->makeSound(): " << std::endl;
-	j->makeSound();
-	std::cout << "i->makeSound(): " << std::endl;
-	i->makeSound();
+	std::cout << "animal->makeSound(): " << std::endl;
+	animal->makeSound();
+	std::cout << "dog->makeSound(): " << std::endl;
+	dog->makeSound();
+	std::cout << "cat->makeSound(): " << std::endl;
+	cat->makeSound();
 	std::cout << std::endl;
-	std::cout << ">>>>>>>Test 2: " << std::endl;
+	std::cout << ">>>>>>>Wrong animal: " << std::endl;
 	std::cout << std::endl;
-	std::cout << "wrongMeta->makeSound(): " << std::endl;
-	wrongMeta->makeSound();
-	std::cout << "wrongJ->makeSound(): " << std::endl;
-	wrongJ->makeSound();
-	std::cout << "wrongI->makeSound(): " << std::endl;
-	wrongI->makeSound();
+	std::cout << "wrongAnimal->makeSound(): " << std::endl;
+	wrongAnimal->makeSound();
+	std::cout << "wrongDog->makeSound(): " << wrongDog->getType() << std::endl;
+	wrongDog->makeSound();
+	std::cout << "wrongCat->makeSound(): " << std::endl;
+	wrongCat->makeSound();
 	std::cout << std::endl;
 
-	delete meta;
-	delete j;
-	delete i;
-	delete wrongMeta;
-	delete wrongJ;
-	delete wrongI;
+	delete animal;
+	delete dog;
+	delete cat;
+	delete wrongAnimal;
+	delete wrongDog;
+	delete wrongCat;
 	return (0);
 }

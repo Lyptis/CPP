@@ -1,23 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ICharacter.hpp                                     :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/22 17:03:21 by svanmeen          #+#    #+#             */
-/*   Updated: 2023/10/23 17:20:48 by svanmeen         ###   ########.fr       */
+/*   Created: 2023/10/03 14:56:41 by svanmeen          #+#    #+#             */
+/*   Updated: 2023/10/03 15:01:57 by svanmeen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#ifndef WRONGCAT_HPP
+# define WRONGCAT_HPP
+# include "WrongAnimal.hpp"
+# include <string>
 
-class	ICharacter
+class WrongCat : public WrongAnimal
 {
+	private:
+		;
 	public:
-		virtual ~ICharacter() {}
-		virtual std::string const &getName() const = 0;
-		virtual void equip(AMateria *m) = 0;
-		virtual void unequip(int idx) = 0;
-		virtual void use(int idx, ICharacter &target) = 0;
+		WrongCat();
+		WrongCat(const WrongCat &WrongCat);
+		~WrongCat();
+		WrongCat	&operator=(const WrongCat &WrongCat);
+
+		void	makeSound(void) const;
 };
+
+#endif

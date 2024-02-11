@@ -1,25 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Ice.hpp                                            :+:      :+:    :+:   */
+/*   WrongDog.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/22 17:00:51 by svanmeen          #+#    #+#             */
-/*   Updated: 2023/10/23 17:12:31 by svanmeen         ###   ########.fr       */
+/*   Created: 2023/10/03 14:56:40 by svanmeen          #+#    #+#             */
+/*   Updated: 2023/10/03 15:01:58 by svanmeen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
-#include "AMateria.hpp"
+#ifndef WRONGDOG_HPP
+# define WRONGDOG_HPP
+# include "WrongAnimal.hpp"
+# include <string>
 
-class	Ice : public AMateria
+class WrongDog : public WrongAnimal
 {
 	private:
 		;
 	public:
-		Ice();
-		Ice(const Ice &Ice);
-		~Ice();
-		Ice	&operator=(const Ice &Ice);
+		WrongDog();
+		WrongDog(const WrongDog &WrongDog);
+		~WrongDog();
+		WrongDog	&operator=(const WrongDog &WrongDog);
+
+		void	makeSound(void) const;
 };
+
+#endif

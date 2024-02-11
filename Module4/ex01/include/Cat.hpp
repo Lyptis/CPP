@@ -6,7 +6,7 @@
 /*   By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 14:27:48 by svanmeen          #+#    #+#             */
-/*   Updated: 2023/10/04 11:30:01 by svanmeen         ###   ########.fr       */
+/*   Updated: 2024/02/11 13:32:43 by svanmeen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 class	Cat : public Animal
 {
 	private:
-		Brain	_brain;
+		Brain	*_brain;
 	public:
 		Cat();
 		Cat(const Cat &Cat);
@@ -27,7 +27,6 @@ class	Cat : public Animal
 		Cat	&operator=(const Cat &Cat);
 
 		void	makeSound(void) const;
-		void	think(int i) const;
 };
 
 #endif
