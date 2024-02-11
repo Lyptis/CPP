@@ -6,7 +6,7 @@
 /*   By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 14:30:28 by svanmeen          #+#    #+#             */
-/*   Updated: 2024/02/11 13:33:39 by svanmeen         ###   ########.fr       */
+/*   Updated: 2024/02/11 15:10:54 by svanmeen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ Cat::Cat(void) : Animal("Cat"){
 }
 
 Cat::~Cat(){
-	std::cout << COLOR_RED << "Cat default destructor called" << COLOR_RESET << std::endl;
 	delete _brain;
+	std::cout << COLOR_RED << "Cat default destructor called" << COLOR_RESET << std::endl;
 }
 
 Cat::Cat(const Cat &Cat) : Animal(Cat){

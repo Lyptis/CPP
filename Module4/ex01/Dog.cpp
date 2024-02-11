@@ -6,7 +6,7 @@
 /*   By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 14:29:23 by svanmeen          #+#    #+#             */
-/*   Updated: 2024/02/11 13:34:49 by svanmeen         ###   ########.fr       */
+/*   Updated: 2024/02/11 15:10:49 by svanmeen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ Dog::Dog(void) : Animal("Dog") {
 }
 
 Dog::~Dog(){
-	std::cout << COLOR_RED << "Dog default destructor called" << COLOR_RESET << std::endl;
 	delete _brain;
+	std::cout << COLOR_RED << "Dog default destructor called" << COLOR_RESET << std::endl;
 }
 
 Dog::Dog(const Dog &Dog) : Animal(Dog) {

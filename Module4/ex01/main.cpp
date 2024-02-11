@@ -6,7 +6,7 @@
 /*   By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 14:25:24 by svanmeen          #+#    #+#             */
-/*   Updated: 2024/02/11 13:37:35 by svanmeen         ###   ########.fr       */
+/*   Updated: 2024/02/11 15:14:05 by svanmeen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,20 @@ int	main(void)
 	std::cout << "---------------------" << std::endl;
 	delete i;
 	std::cout << "---------------------" << std::endl;
+
+
+	Animal *array[6];
+
+	for (int i = 0; i < 6; i++) {
+		if (i < 3)
+			array[i] = new Dog();
+		else
+			array[i] = new Cat();
+	}
+	for (int i = 0; i < 6; i++) {
+		array[i]->makeSound();
+		delete array[i];
+	}
+
 	return (0);
 }
