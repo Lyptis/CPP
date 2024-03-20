@@ -6,16 +6,21 @@
 #    By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/01 00:23:19 by svanmeen          #+#    #+#              #
-#    Updated: 2024/03/20 12:33:12 by svanmeen         ###   ########.fr        #
+#    Updated: 2024/03/20 15:06:32 by svanmeen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	ScalarConverter
+NAME	=	Base
 SRCS	=	main.cpp \
-			ScalarConverter.cpp
+			A.cpp \
+			B.cpp \
+			C.cpp
 
 I_DIR	=	include/
-INC		=	${I_DIR}ScalarConverter.hpp
+INC		=	${I_DIR}Base.hpp \
+			${I_DIR}A.hpp \
+			${I_DIR}B.hpp \
+			${I_DIR}C.hpp
 
 CC			=	c++
 OBJS 		=	${SRCS:.cpp=.o}

@@ -1,28 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   A.hpp                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/17 13:41:44 by svanmeen          #+#    #+#             */
-/*   Updated: 2024/03/20 13:04:55 by svanmeen         ###   ########.fr       */
+/*   Created: 2024/03/20 15:08:02 by svanmeen          #+#    #+#             */
+/*   Updated: 2024/03/20 15:10:57 by svanmeen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScalarConverter.hpp"
+#ifndef A_HPP
+# define A_HPP
 
-int main(int argc, char **argv) {
-	if (argc != 2) {
-		std::cout << "./ScalarCoverter [number]" << std::endl;
-		return (1);
-	}
-	try {
-	ScalarConverter::convert(argv[1]);
-	}
-	catch (std::exception &e)
-	{
-		std::cout << e.what() << std::endl;
-	}
-	return (0);
-}
+# include "Base.hpp"
+
+class A : public Base {};
+
+#endif

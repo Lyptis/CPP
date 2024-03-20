@@ -6,16 +6,16 @@
 #    By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/01 00:23:19 by svanmeen          #+#    #+#              #
-#    Updated: 2024/03/20 12:33:12 by svanmeen         ###   ########.fr        #
+#    Updated: 2024/03/20 14:16:52 by svanmeen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	ScalarConverter
+NAME	=	Serialization
 SRCS	=	main.cpp \
-			ScalarConverter.cpp
+			Serializer.cpp
 
 I_DIR	=	include/
-INC		=	${I_DIR}ScalarConverter.hpp
+INC		=	${I_DIR}Serializer.hpp
 
 CC			=	c++
 OBJS 		=	${SRCS:.cpp=.o}
