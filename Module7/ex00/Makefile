@@ -6,19 +6,15 @@
 #    By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/01 00:23:19 by svanmeen          #+#    #+#              #
-#    Updated: 2024/03/21 12:58:26 by svanmeen         ###   ########.fr        #
+#    Updated: 2024/03/21 12:58:23 by svanmeen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	Base
+NAME	=	Template00
 SRCS	=	main.cpp \
-			Base.cpp
 
 I_DIR	=	include/
-INC		=	${I_DIR}Base.hpp \
-			${I_DIR}A.hpp \
-			${I_DIR}B.hpp \
-			${I_DIR}C.hpp
+INC		=	${I_DIR}whatever.hpp
 
 CC			=	c++
 OBJS 		=	${SRCS:.cpp=.o}
