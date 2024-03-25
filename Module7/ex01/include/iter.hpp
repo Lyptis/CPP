@@ -12,10 +12,24 @@
 
 #ifndef ITER_HPP
 # define ITER_HPP
+# include <iostream>
 
-template <typename T>
-void iter(T *array, unsigned int size, void (*p)(T)) {
-	for (unsigned int i = 0; i < size; i++) {
+template <typename T, typename U>
+void iter(T *array, U size, void (*p)(T &)) {
+	if (size <= 0 || !array || !p) {
+		return;
+	}
+	for (U i = 0; i < size; i++) {
+		p(array[i]);
+	}
+}
+
+template <typename T, typename U>
+void iter(const T *array, U size, void (*p)(const T &)) {
+	if (size <= 0 || !array || !p) {
+		return;
+	}
+	for (U i = 0; i < size; i++) {
 		p(array[i]);
 	}
 }

@@ -10,13 +10,40 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "iter.hpp"
+#include "include/iter.hpp"
 
-int interate(int i){
-	return (i);
+void print(int &i) {
+	std::cout << i << std::endl;
+}
+
+void print(const int &i) {
+	std::cout << i << std::endl;
+}
+
+void print(std::string &str) {
+	std::cout << str << std::endl;
+}
+
+void print(const std::string &str) {
+	std::cout << str << std::endl;
 }
 
 int main () {
-	int *tab = new (int[5]);
-	::iter(tab, 5, (*interate)(1));
+
+	int tab[] = { 1, 2, 3, 4, 5 };
+
+	iter(tab, 5, &print);
+	std::cout << std::endl;
+	const int csttab[] = { 1, 2, 3, 4, 5 };
+
+	iter(csttab, 5, &print);
+	std::cout << std::endl;
+	std::string strtab[] = { "Hello", "World", "!" };
+
+	iter(strtab, 3, &print);
+	std::cout << std::endl;
+	const std::string cststrtab[] = { "Hello", "World", "!" };
+
+	iter(cststrtab, 3, &print);
+	std::cout << std::endl;
 }
