@@ -5,31 +5,25 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/25 15:43:52 by svanmeen          #+#    #+#             */
-/*   Updated: 2024/03/26 08:05:18 by svanmeen         ###   ########.fr       */
+/*   Created: 2024/03/26 08:14:54 by svanmeen          #+#    #+#             */
+/*   Updated: 2024/03/26 08:26:57 by svanmeen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "array.hpp"
+#include "easyfind.hpp"
 
 int main() {
-	Array<int> intArray(5);
-	Array<std::string> strArray(3);
+	std::vector<int> v;
+	v.push_back(1);
+	v.push_back(2);
+	v.push_back(3);
 
 	try {
-		for (unsigned int i = 0; i < intArray.size(); i++) {
-			intArray[i] = i;
-			std::cout << intArray[i] << std::endl;
-		}
-		std::cout << std::endl;
-		for (unsigned int i = 0; i < strArray.size(); i++) {
-			strArray[i] = "Hello";
-			std::cout << strArray[i] << std::endl;
-		}
-		std::cout << std::endl;
-		std::cout << intArray[5] << std::endl;
+		std::cout << *easyfind(v, 2) << std::endl;
+		std::cout << *easyfind(v, 4) << std::endl;
 	} catch (std::exception &e) {
-		std::cerr << e.what() << std::endl;
+		std::cout << "Element not found" << std::endl;
 	}
+	
 	return 0;
 }
