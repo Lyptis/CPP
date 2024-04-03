@@ -6,15 +6,16 @@
 #    By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/01 00:23:19 by svanmeen          #+#    #+#              #
-#    Updated: 2024/03/26 08:19:51 by svanmeen         ###   ########.fr        #
+#    Updated: 2024/04/03 14:32:23 by svanmeen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	easyfind
+NAME	=	Span
 SRCS	=	main.cpp \
+			Span.cpp
 
 I_DIR	=	include/
-INC		=	${I_DIR}easyfind.hpp
+INC		=	${I_DIR}Span.hpp
 
 CC			=	c++
 OBJS 		=	${SRCS:.cpp=.o}
