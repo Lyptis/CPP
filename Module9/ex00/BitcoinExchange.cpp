@@ -6,7 +6,7 @@
 /*   By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 11:27:07 by svanmeen          #+#    #+#             */
-/*   Updated: 2024/04/08 14:49:12 by svanmeen         ###   ########.fr       */
+/*   Updated: 2024/04/10 16:26:24 by svanmeen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,11 +71,14 @@ std::map<std::string, float> parsedata() {
 	return ret;
 }
 
+int compare(std::map<std::string, float>::iterator it, std::string key) {
+	return (it->first.compare(key));
+}
+
 void parseinput(char *file, std::map<std::string, float> tab) {
 	(void)tab;
 	std::map<std::string, float> ret;
 	std::string key;
-	float val;
 	std::string line;
 	std::ifstream data(file);
 	if (!data.is_open())
@@ -84,8 +87,30 @@ void parseinput(char *file, std::map<std::string, float> tab) {
 		try {
 			key = getkey(line, '|');
 			if (!isKey(key)) {
-				val = getval2(line, '|');
-				std::cout << key << " = " << val << std::endl;
+				float val = getval2(line, '|');
+				if (tab.find(key) == tab.end()) {
+					std::map<std::string, float>::iterator it = tab.begin();
+					while (it != tab.end()) {
+						
+						if (it->first.compare(key) >= 0) {
+							if (it->first.compare(key) == 0) {
+								std::cout << key << " => " << val << " = " << it->second * val << std::endl;
+								break;
+							}
+							if (it == tab.begin()) {
+								std::cout << "Error: bad input => " << key << std::endl;
+								break;
+							}
+							it--;
+							std::cout << key << " => " << val << " = " << it->second * val << std::endl;
+							break;
+						}
+						it++;
+					}
+					if (it == tab.end()) {
+						std::cout << "Error: bad input => " << key << std::endl;
+					}
+				}
 			}
 		}
 		catch (std::exception &e) {

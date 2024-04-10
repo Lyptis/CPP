@@ -6,7 +6,7 @@
 /*   By: svanmeen <svanmeen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 11:26:46 by svanmeen          #+#    #+#             */
-/*   Updated: 2024/04/08 14:38:51 by svanmeen         ###   ########.fr       */
+/*   Updated: 2024/04/10 16:02:52 by svanmeen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 #include <fstream>
 #include <map>
 #include <math.h>
+#include <algorithm>
 
 class FileException : public std::exception {
 	public:
